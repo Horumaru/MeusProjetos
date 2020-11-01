@@ -10,7 +10,6 @@ Exemplo:
 var nomeDaCorEscolhida = 'Grafite';
 
 console.log('a extenção está funcionando')
-
 // Ve se Bloco do save carregou e adiciona o botão do auto save lá.
 var interval = setInterval(()=>{
     headerzin = document.querySelector('.UXzdrb');
