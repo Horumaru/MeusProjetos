@@ -1,0 +1,17 @@
+{
+    "manifest_version":2,
+    
+    "name" : "BotCalendar",
+    "version": "1.0",
+    "content_scripts":[
+        {
+            "matches": ["https://calendar.google.com/calendar/u/0/r/eventedit"],
+            "js":["BotCalendar.js"],
+            "css":["botaoAutoSave.css"]
+            
+        }
+    ],
+    "icons": { "16": "icon16.png",
+        "48": "icon48.png",
+       "128": "icon128.png" }
+}

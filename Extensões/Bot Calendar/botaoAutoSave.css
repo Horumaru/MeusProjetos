@@ -1,0 +1,24 @@
+/*
+headerzin = document.querySelector('.UXzdrb')
+
+*/
+
+.SalvaAiButton{
+    padding: 0 24px;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+
+
+    background: #1a73e8;
+    color: #fff;
+
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Google Sans',Roboto,Arial,sans-serif;
+
+    border: none;
+    border-radius: 8px;
+    min-height: 40px;
+}
