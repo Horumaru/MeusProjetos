@@ -10,6 +10,23 @@ Clicar no botão
 
 /*
 reconhecer o botão
+
+// Ve se Bloco do save carregou e adiciona o botão do auto save lá.
+var interval = setInterval(()=>{
+    headerzin = document.querySelector('.UXzdrb');
+    if(headerzin){
+        console.log(headerzin)
+        clearInterval(interval)
+        var button = document.createElement('button')
+        button.innerHTML = "Auto Save"
+        button.classList.add('SalvaAiButton')
+        headerzin.appendChild(button)
+        button.addEventListener('click', ()=> {
+            nomesClick();
+            console.log('Eu estou vivo!');
+        })
+    }
+},1000)
 */
 
 //LoguIn
