@@ -7,37 +7,24 @@ Deslog ID  > OUT_BTN$0
 Adicionar cronometro /  reconhecer relógio
 Clicar no botão
 */
+//gera um segundo aleatório
+function getRandomArbitrary(min, max) {
+  return Math.random() * (max - min) + min;
+}
+var aSeg = parseInt(getRandomArbitrary(00,59));
+console.log(aSeg)
 
-/*
-reconhecer o botão
-
-// Ve se Bloco do save carregou e adiciona o botão do auto save lá.
+//checa se é o segundo coreto
 var interval = setInterval(()=>{
-    headerzin = document.querySelector('.UXzdrb');
-    if(headerzin){
-        console.log(headerzin)
-        clearInterval(interval)
-        var button = document.createElement('button')
-        button.innerHTML = "Auto Save"
-        button.classList.add('SalvaAiButton')
-        headerzin.appendChild(button)
-        button.addEventListener('click', ()=> {
-            nomesClick();
-            console.log('Eu estou vivo!');
-        })
-    }
-},1000)
-*/
-// Ve se o pronometro está no tempo desejado
-var interval = setInterval(()=>{
-	var hh = document.getElementById('Hours').innerText;
-	var mm = document.getElementById('Minutes').innerText;
-	var ss = document.getElementById('Seconds').innerText;
-	console.log(hh+' : '+ mm +' : '+ ss);
-    if(mm == '59' && ss == '00'){
-                console.log('Agora foi -> '+hh+' : '+ mm +' : '+ ss);
+        var dateT = new Date();
+        var mm = dateT.getMinutes();
+        var ss = dateT.getSeconds();
+        
+	console.log(mm + ' : '+ss)
+        if (mm == '00' && ss == aSeg){
+                console.log('Deu');
                 clearInterval(interval)
-        }
+	}
 },1000)
 
 //LoguIn
