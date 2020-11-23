@@ -11,8 +11,9 @@ Clicar no botão
 function getRandomArbitrary(min, max) {
   return Math.random() * (max - min) + min;
 }
+var aMin = parseInt(getRandomArbitrary(35,36));
 var aSeg = parseInt(getRandomArbitrary(00,59));
-console.log(aSeg)
+console.log(aMin +' : '+ aSeg)
 
 //checa se é o segundo coreto
 var interval = setInterval(()=>{
@@ -21,11 +22,12 @@ var interval = setInterval(()=>{
         var ss = dateT.getSeconds();
         
 	console.log(mm + ' : '+ss)
-        if (mm == '00' && ss == aSeg){
+        if (mm == aMin && ss == aSeg){
                 console.log('Deu');
                 clearInterval(interval)
+                logout()
 	}
-},1000)
+},1000);
 
 //LoguIn
 function (loguin){
