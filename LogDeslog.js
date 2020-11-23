@@ -28,6 +28,17 @@ var interval = setInterval(()=>{
     }
 },1000)
 */
+// Ve se o pronometro está no tempo desejado
+var interval = setInterval(()=>{
+	var hh = document.getElementById('Hours').innerText;
+	var mm = document.getElementById('Minutes').innerText;
+	var ss = document.getElementById('Seconds').innerText;
+	console.log(hh+' : '+ mm +' : '+ ss);
+    if(mm == '59' && ss == '00'){
+                console.log('Agora foi -> '+hh+' : '+ mm +' : '+ ss);
+                clearInterval(interval)
+        }
+},1000)
 
 //LoguIn
 function (loguin){
