@@ -53,7 +53,6 @@ function somaMin() {
 //loguin()
 function loguin() {
    console.log('login');
-   /*
    var logss = document.getElementsByClassName('PSPUSHBUTTON')
    for (var i = 0; i < logss.length; i++) {
       console.log(i);
@@ -62,19 +61,16 @@ function loguin() {
          document.getElementsByClassName('PSPUSHBUTTON')[i].click();
       }
    }
-   */
 }
 //logout()
 function logout() {
    console.log('logOUT');
-   /*
    var logss = document.getElementsByClassName('PSPUSHBUTTON')
    for (var i = 0; i < logss.length; i++) {
       console.log(i);
       if (logss[i].id == 'OUT_BTN$0') {
          console.log(logss[i].id + 'cliquei nesse')
-         //document.getElementsByClassName('PSPUSHBUTTON')[i].click();
+         document.getElementsByClassName('PSPUSHBUTTON')[i].click();
       }
    }
-   */
 }
