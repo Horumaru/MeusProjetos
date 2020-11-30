@@ -1,0 +1,47 @@
+// em andamento
+
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+        var links = document.getElementsByClassName("btn btn-primary");
+        for (var i = 0; i < links.length; i++){
+            links[i].addEventListener('click', function(e){   
+                    if(e && this.value.match('ENVIAR')){
+                        console.log('Click text sucess');
+                    }
+            });
+            
+        }
+    });
+</script>
+
+
+window.addEventListener('click', function(){
+    //add a classe do botão
+    var botoes = document.getElementsByClassName('btn bt-padrao bt-envia-trab-conosco');
+    var redeSocial  = document.querySelectorAll('#conectar-center > header > div.conectar-modal-title > span')[0].innerText.replace('Adicionar ','')
+    console.log(redeSocial);
+    for (var i = 0; i < botoes.length; i++){
+        botoes[i].addEventListener('click', function(e){   
+            //if(e && this.innerText.match('Enviar')){
+                console.log('Click text sucess');
+            //}
+         });
+     }
+});
+
+
+
+
+window.addEventListener('click', function(){
+    //add a classe do botão
+    var botoes = document.getElementsByClassName('conectar-03');
+    for (var i = 0; i < botoes.length; i++){
+        botoes[i].addEventListener('click', function(e){   
+            //if(e && this.innerText.match('Enviar')){
+                var redeSocial  = document.querySelectorAll('#conectar-center > header > div.conectar-modal-title > span')[0].innerText.replace('Adicionar ','')
+                console.log(redeSocial);
+                console.log('Click text sucess');
+            //}
+         });
+     }
+});

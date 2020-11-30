@@ -1,0 +1,460 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2020-03-30 13:50:55",
+    "containerVersion": {
+        "path": "accounts/6000561752/containers/30626722/versions/0",
+        "accountId": "6000561752",
+        "containerId": "30626722",
+        "containerVersionId": "0",
+        "container": {
+            "path": "accounts/6000561752/containers/30626722",
+            "accountId": "6000561752",
+            "containerId": "30626722",
+            "name": "Tudo pronto",
+            "publicId": "GTM-KBFTQQ8",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1585335385856",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6000561752/containers/30626722/workspaces?apiLink=container"
+        },
+        "tag": [
+            {
+                "accountId": "6000561752",
+                "containerId": "30626722",
+                "tagId": "22",
+                "name": "tawk.to - Widget - All Pages",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script type=\"text/javascript\">\n \n<!--Início do código \"Tawk.to Script\" aqui-->\n  \n<!--Final do código \"Tawk.to Script\" aqui-->\n \n \n    var dataLayerPush = function (event) {\n        dataLayer.push({\n            'event': 'tawk.to',\n            'eventAction': event\n        });\n\n        /* ou */\n        //gtag('event', 'tawk.to', { 'event_category': event });\n\n        /* ou */\n        //ga('send','event', event ,'tawk.to');\n       \n    }\n\n    Tawk_API.onChatStarted = function () {\n        console.log(\"Chat Started\");\n        dataLayerPush(\"Chat Started\");\n    };\n    Tawk_API.onChatMaximized = function () {\n        console.log(\"Chat Window opened\");\n        dataLayerPush(\"Chat Window opened\");\n    };\n    Tawk_API.onChatMinimized = function () {\n        console.log(\"Chat Window closed\");\n        dataLayerPush(\"Chat Window closed\");\n    };\n    Tawk_API.onChatHidden = function () {\n        console.log(\"Chat Window hidden\");\n        dataLayerPush(\"Chat Window hidden\");\n    };\n    Tawk_API.onChatStarted = function () {\n        console.log(\"Chat started\");\n        dataLayerPush(\"Chat started\");\n    };\n    Tawk_API.onChatEnded = function () {\n        console.log(\"Chat ended\");\n        dataLayerPush(\"Chat ended\");\n    };\n    Tawk_API.onPrechatSubmit = function (data) {\n        console.log(\"Prechat form submitted\");\n        dataLayerPush(\"Prechat form submitted\");\n    };\n    Tawk_API.onOfflineSubmit = function (data) {\n        console.log(\"Offline Chat submit\");\n        dataLayerPush(\"Offline Chat submit\");\n    };\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1585576217268",
+                "firingTriggerId": [
+                    "26"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            },
+            {
+                "accountId": "6000561752",
+                "containerId": "30626722",
+                "tagId": "24",
+                "name": "GA - Event - Tawk.to",
+                "type": "ua",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "nonInteraction",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "overrideGaSettings",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "doubleClick",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setTrackerName",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useDebugVersion",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventCategory",
+                        "value": "{{eventAction}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackType",
+                        "value": "TRACK_EVENT"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableLinkId",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventAction",
+                        "value": "{{Event}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEcommerce",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackingId",
+                        "value": "UA-12345-6"
+                    }
+                ],
+                "fingerprint": "1585333990700",
+                "firingTriggerId": [
+                    "23"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            },
+            {
+                "accountId": "6000561752",
+                "containerId": "30626722",
+                "tagId": "27",
+                "name": "Vinculador de conversões",
+                "type": "gclidw",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableCrossDomain",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableCookieOverrides",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1585334392819",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "6000561752",
+                "containerId": "30626722",
+                "triggerId": "17",
+                "name": "custom - user",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "user"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1585328110297"
+            },
+            {
+                "accountId": "6000561752",
+                "containerId": "30626722",
+                "triggerId": "23",
+                "name": "tawk.to",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "tawk.to"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1585333775809"
+            },
+            {
+                "accountId": "6000561752",
+                "containerId": "30626722",
+                "triggerId": "26",
+                "name": "DOM pronto",
+                "type": "DOM_READY",
+                "fingerprint": "1585333439453"
+            },
+            {
+                "accountId": "6000561752",
+                "containerId": "30626722",
+                "triggerId": "29",
+                "name": "whats",
+                "type": "LINK_CLICK",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "http://bit.ly/37oDR5m"
+                            }
+                        ]
+                    }
+                ],
+                "waitForTags": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "checkValidation": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "waitForTagsTimeout": {
+                    "type": "TEMPLATE",
+                    "value": "2000"
+                },
+                "uniqueTriggerId": {
+                    "type": "TEMPLATE"
+                },
+                "fingerprint": "1585335322492"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "6000561752",
+                "containerId": "30626722",
+                "variableId": "18",
+                "name": "dlv - name",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "name"
+                    }
+                ],
+                "fingerprint": "1585328110298"
+            },
+            {
+                "accountId": "6000561752",
+                "containerId": "30626722",
+                "variableId": "19",
+                "name": "dlv - email",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "email"
+                    }
+                ],
+                "fingerprint": "1585328110298"
+            },
+            {
+                "accountId": "6000561752",
+                "containerId": "30626722",
+                "variableId": "21",
+                "name": "dlv - eventAction",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "eventAction"
+                    }
+                ],
+                "fingerprint": "1585328110299"
+            },
+            {
+                "accountId": "6000561752",
+                "containerId": "30626722",
+                "variableId": "25",
+                "name": "eventAction",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "eventAction"
+                    }
+                ],
+                "fingerprint": "1585333350128",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6000561752",
+                "containerId": "30626722",
+                "variableId": "28",
+                "name": "UA-158738473-1",
+                "type": "gas",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "cookieDomain",
+                        "value": "auto"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "doubleClick",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setTrackerName",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useDebugVersion",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useHashAutoLink",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decorateFormsAutoLink",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableLinkId",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEcommerce",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackingId",
+                        "value": "UA-158738473-1"
+                    }
+                ],
+                "fingerprint": "1585334982884"
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "6000561752",
+                "containerId": "30626722",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "6000561752",
+                "containerId": "30626722",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "6000561752",
+                "containerId": "30626722",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "6000561752",
+                "containerId": "30626722",
+                "type": "REFERRER",
+                "name": "Referrer"
+            },
+            {
+                "accountId": "6000561752",
+                "containerId": "30626722",
+                "type": "EVENT",
+                "name": "Event"
+            },
+            {
+                "accountId": "6000561752",
+                "containerId": "30626722",
+                "type": "CLICK_ELEMENT",
+                "name": "Click Element"
+            },
+            {
+                "accountId": "6000561752",
+                "containerId": "30626722",
+                "type": "CLICK_URL",
+                "name": "Click URL"
+            },
+            {
+                "accountId": "6000561752",
+                "containerId": "30626722",
+                "type": "CLICK_TEXT",
+                "name": "Click Text"
+            }
+        ],
+        "fingerprint": "1585576255071",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6000561752/containers/30626722/versions/0?apiLink=version"
+    }
+}

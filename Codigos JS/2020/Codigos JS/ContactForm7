@@ -1,0 +1,16 @@
+<script>
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+   console.log('wpcf7mailsent')
+   window.dataLayer.push({
+      'event' : 'wpcf7mailsent',
+   });
+}, false );
+</script>
+
+
+
+<script>
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+    gtag('event', 'conversion', {'send_to': 'AW-646826455/D49oCKfzkdcBENeTt7QC'});
+}, false );
+</script>

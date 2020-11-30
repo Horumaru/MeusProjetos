@@ -1,0 +1,46 @@
+
+delay 
+<script>
+var delayInMilliseconds = 9000; //3 second
+setTimeout(function() {
+    var dataLayer = window.dataLayer || [];
+    dataLayer.push({
+    'event': 'delayTimeOut',
+
+});
+}, delayInMilliseconds);
+</script>
+
+<script>
+function teste(){
+        document.querySelector('#rso > div:nth-child(1) > div > div > div.r > a > h3').click()
+}
+teste();
+</script>
+
+
+
+200925 15:09:27.200 FINE 30919 barkeep.SessionUpdateListener SessionUpdate received: sessionUpdateType: PARTICIPANT
+sequenceId: 1601057367014160
+participantsInfo: {
+  sessionId: P0000000000223462072
+  participants: {
+    participantId: 091a0722-88bb-4c16-848e-544603fa606e
+    participantType: AGENT_PARTICIPANT
+    agentId: 657805361660
+    isOnHold: false
+    clientId: 1601053170705
+    isJoined: true
+    joinStatus: JOINED
+  }
+  participants: {
+    participantId: 9ca937c0-cd7b-47e3-8164-c6371fc48576
+    participantType: INVITED_PHONE
+    phoneNumber: +5548988282381
+    isOnHold: false
+    isJoined: false
+    joinStatus: JOINING
+  }
+  lastUpdatedTimeMs: 1601057367014160
+}
+, type [PARTICIPANT], sequenceId [1601057367014160]
