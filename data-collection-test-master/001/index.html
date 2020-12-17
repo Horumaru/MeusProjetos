@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste 001</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js"
+            integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+    <script>
+      (function (win, doc) {
+        var f = doc.getElementsByTagName("script")[0];
+        var j = doc.createElement("script");
+        j.async = true;
+        j.src = './tagueamento.js';
+        f.parentNode.insertBefore(j, f);
+      })(window, document);
+    </script>
+</head>
+<body>
+<h1>
+    Retorne um array com o nome de cada botão no carregamento da página. Quando o botão for clicado, retorne o nome do
+    botão.
+</h1>
+<div id="botoes">
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+</div>
+<script>
+  $('#botoes').find('button').each(function () {
+    $(this).text('xxxx-xxxx-xxxx'.replace(/x/g, function () {
+      return Math.floor(Math.random() * 16).toString(16);
+    }))
+  })
+</script>
+</body>
+</html>
