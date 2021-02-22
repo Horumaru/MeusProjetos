@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste 007</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js"
+            integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/Marak/faker.js/master/examples/browser/js/faker.js"></script>
+    <script>
+      (function (win, doc) {
+        var f = doc.getElementsByTagName("script")[0];
+        var j = doc.createElement("script");
+        j.async = true;
+        j.src = './tagueamento.js';
+        f.parentNode.insertBefore(j, f);
+      })(window, document);
+    </script>
+</head>
+<body>
+<h1>
+    No carregamento da página retorne uma lista (array) dos SKUs dos "produtos" abaixo. Quando um produto for clicado,
+    retorne um objeto contendo o seu nome, preço e SKU.
+</h1>
+<style>
+    #produtos a {
+        display: inline-block;
+        margin: 1em;
+        border: 1px solid black;
+        padding: 1em;
+    }
+</style>
+<div id="produtos">
+    <a href="#" data-sku="">
+        <p class="name"></p>
+        <div>
+            <img src="http://lorempixel.com/200/200/abstract/" alt="">
+        </div>
+        <p class="price"></p>
+    </a>
+    <a href="#" data-sku="">
+        <p class="name"></p>
+        <div>
+            <img src="http://lorempixel.com/200/200/abstract/?1" alt="">
+        </div>
+        <p class="price"></p>
+    </a>
+    <a href="#" data-sku="">
+        <p class="name"></p>
+        <div>
+            <img src="http://lorempixel.com/200/200/abstract/?2" alt="">
+        </div>
+        <p class="price"></p>
+    </a>
+    <a href="#" data-sku="">
+        <p class="name"></p>
+        <div>
+            <img src="http://lorempixel.com/200/200/abstract/?3" alt="">
+        </div>
+        <p class="price"></p>
+    </a>
+    <a href="#" data-sku="">
+        <p class="name"></p>
+        <div>
+            <img src="http://lorempixel.com/200/200/abstract/?4" alt="">
+        </div>
+        <p class="price"></p>
+    </a>
+</div>
+<script>
+  (function (produtos) {
+    for (var elementIndex in produtos) {
+      if (produtos.hasOwnProperty(elementIndex)) {
+        var produto = produtos[elementIndex];
+        produto.dataset['sku'] = 'xxxx-xxxx-xxxx'.replace(/x/g, function () {
+          return Math.floor(Math.random() * 16).toString(16);
+        });
+        for (var subElementIndex in produto.children) {
+          if (produto.children.hasOwnProperty(subElementIndex)) {
+            var element = produto.children[subElementIndex];
+            if (element.className === 'name') {
+              element.innerText = faker.commerce.productName();
+            } else if (element.className === 'price') {
+              element.innerText = faker.commerce.price();
+            }
+          }
+        }
+      }
+    }
+  })(document.getElementById('produtos').children);
+</script>
+</body>
+</html>
