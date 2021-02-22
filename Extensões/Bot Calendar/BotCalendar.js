@@ -5,7 +5,7 @@ podemos pegar o click diretamente pelo selector ou ID do botão.
 Exemplo: 
     document.querySelectorAll("botao").addEventListener('click',function(){
     })
-
+*/
 var nomeDaCorEscolhida = 'Grafite';
 console.log('a extenção está funcionando')
 // Ve se Bloco do save carregou e adiciona o botão do auto save lá.
@@ -24,7 +24,7 @@ var interval = setInterval(()=>{
         })
     }
 },1000)
-*/
+
 
 //Calendar
 //Delay de 2 Seg para a página carregar.
