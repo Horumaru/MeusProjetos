@@ -27,7 +27,7 @@ var interval = setInterval(()=>{
 
 
 //Calendar
-//Delay de 2 Seg para a página carregar.
+//Delay de .5 Seg para a página carregar.
 var delay= 500;
 setTimeout(function(){
     console.log('Ola mundo!');
