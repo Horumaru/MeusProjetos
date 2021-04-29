@@ -18,6 +18,5 @@ for (var i = 0; i < botoes.length; i++){
             console.log('Os botões já foram todos clicados na ordem abaixo')
             console.log(array.toString())
         }
-        
     })
 }
