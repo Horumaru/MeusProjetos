@@ -46,7 +46,8 @@ function nomesClick(){
     setTimeout(clickFeio, delay)
 }
 function clickFeio(){
-    document.getElementsByClassName('Z7IIl jT5e9')[3].click();
+    var len = document.getElementsByClassName('Z7IIl jT5e9').length -1
+    document.getElementsByClassName('Z7IIl jT5e9')[len].click();
     setTimeout(mudaCor, delay)  
 }
 /*
@@ -104,7 +105,7 @@ function enviar(){
 function invite(){
     var invites = document.getElementsByClassName('NPEfkd RveJvd snByac')
     for(i=0; i< invites.length ; i++){
-        if(invites[i].innerText == 'Invite external guests'){
+        if(invites[i].innerText == 'Invite all guests'){
             console.log('invites click')
             invites[i].click()
             console.log('Confirmei convite para emails externos')
