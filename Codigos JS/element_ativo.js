@@ -4,7 +4,8 @@ document.addEventListener('submit', function(){
     	var cont = 0
        	var interval = setInterval(() => { 
         	var element = document.getElementsByClassName('et-pb-contact-message')[0].innerText
-            var texto = "Obrigado por entrar em contato conosco"
+            	var texto = "Obrigado por entrar em contato conosco"
+		
           	if (element== texto) {
             	console.log(element);
               	clearInterval(interval)
