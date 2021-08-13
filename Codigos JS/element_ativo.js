@@ -3,7 +3,7 @@ document.addEventListener('submit', function(){
     function elementAtivo() {
        var interval = setInterval(() => {
          var cont = 0
-          var element = document.getElementsByClassName('et-pb-contact-message')[0].innerText
+          var element = document.getElementsByClassName('et-pb-contact-message')[0].innerText == "Obrigado por entrar em contato conosco"
           if (element) {
               console.log(element);
               clearInterval(interval)
