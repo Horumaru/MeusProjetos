@@ -6,7 +6,7 @@ document.addEventListener('submit', function(){
         	var element = document.getElementsByClassName('et-pb-contact-message')[0].innerText
             	var texto = "Obrigado por entrar em contato conosco"
 		
-          	if (element== texto) {
+          	if (element == texto) {
             	console.log(element);
               	clearInterval(interval)
               	//window.location.reload();
