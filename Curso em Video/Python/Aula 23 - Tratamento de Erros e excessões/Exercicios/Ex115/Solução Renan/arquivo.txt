@@ -1,0 +1,6 @@
+------------------------------
+     PESSOAS CADASTRADAS      
+------------------------------
+renan,	 32 anos 
+Ana,	 10 anos 
+bebum,	 50 anos 

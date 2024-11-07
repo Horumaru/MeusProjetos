@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    <h1>Olá ao clicar aqui você vai ouvir uma mensagem</h1>
+    <h3> figite o que você quer falar e clique no botão para ouvir</h3>
+    <input type="text" id="inputText">
+    <button id="button">Clique aqui</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const script = document.createElement('script');
+            script.src = 'Speech.js';
+            document.body.appendChild(script);
+        });
+    </script>
+</body>
+</html>

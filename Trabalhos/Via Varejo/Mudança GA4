@@ -1,0 +1,119 @@
+<script>
+    var eventAction = {{eventAction}};
+    var eventCategory = {{eventCategory}};
+    var eventLabel = {{eventLabel}};
+    
+  if(eventAction==="clicou"){
+    dataLayer.push({
+        event: 'ga4_event', 
+        eventName:'clicou_'+eventCategory
+      });
+  }; 
+  if(eventAction==="calculou" && eventCategory==="carrinho" && eventLabel=="frete"){
+           dataLayer.push({
+             event: 'ga4_event', 
+             eventName:'calculou_frete_carrinho',
+             cep: {{DT - cep}}
+           });
+  };
+  if(eventAction==="desativou novo checkout" && eventCategory==="carrinho"){
+    dataLayer.push({
+        event: 'ga4_event', 
+        eventName:'desativou_novo_checkout',
+        motivo:eventLabel
+      });
+  }; 
+  if(eventAction==="exibiu" && eventCategory==="carrinho" && eventLabel==="novo checkout"){
+    dataLayer.push({
+        event: 'ga4_event', 
+        eventName:'exibiu_novo checkout',
+
+      });
+  }; 
+  if(eventAction==="exibiu" && eventCategory==="produto" && eventLabel==="avise-me"){
+    dataLayer.push({
+        event: 'ga4_event', 
+        eventName:'produto_indisponivel',
+        produto:eventLabel
+      });
+  }; 
+  if(eventAction==="calculou" && eventCategory==="produto" && eventLabel=="frete"){
+           dataLayer.push({
+             event: 'ga4_event', 
+             eventName:'calculou_frete_produto',
+             cep: {{DT - cep}}
+           });
+  };
+  if(eventAction==="exibiu" && eventCategory==="retira rapido"){
+    dataLayer.push({
+        event: 'ga4_event', 
+        eventName:'retira rapido'+'_'+eventLabel,
+      });
+  }; 
+  if(eventAction==="exibiu" && eventCategory==="erro"){
+    dataLayer.push({
+        event: 'ga4_event', 
+        eventName:'exibiu_erro',
+        erro: eventLabel
+      });
+  };   
+  if(eventAction==="Exibiu mensagem"){
+    dataLayer.push({
+        event: 'ga4_event', 
+        eventName:'exibiu_mensagem',
+        mensagem: eventLabel
+      });
+  }; 
+  if(eventAction==="recuperacao email" && eventCategory==="acesso"){
+    dataLayer.push({
+        event: 'ga4_event', 
+        eventName:'recuperacao_email'
+      });
+  }; 
+  if(eventAction==="recuperacao senha" && eventCategory==="acesso"){
+    dataLayer.push({
+        event: 'ga4_event', 
+        eventName:'recuperacao_senha'
+      });
+  }; 
+  if(eventAction==="recuperacao conta" && eventCategory==="acesso"){
+    dataLayer.push({
+        event: 'ga4_event', 
+        eventName:'recuperacao_conta'
+      });
+  };   
+  if(eventAction==="favoritou" && eventCategory==="favoritos"){
+    dataLayer.push({
+        event: 'ga4_event', 
+        eventName:'favoritou_favoritos',
+        produto:eventLabel
+      });
+  };   
+  if(eventAction==="desfavoritou" && eventCategory==="favoritos"){
+    dataLayer.push({
+        event: 'ga4_event', 
+        eventName:'desfavoritou_favoritos',
+        produto: eventLabel
+      });
+  };   
+  if(eventAction==="favoritou" && eventCategory==="produto"){
+    dataLayer.push({
+        event: 'ga4_event', 
+        eventName:'favoritou_produto',
+        produto: eventLabel
+      });
+  };   
+  if(eventAction==="video" && eventCategory==="produto"){
+    dataLayer.push({
+        event: 'ga4_event', 
+        eventName:'video_produto',
+        produto: eventLabel
+      });
+  };   
+    if(eventAction==="exibiu" && eventLabel==="novo checkout"){
+    dataLayer.push({
+        event: 'ga4_event', 
+        eventName:'exibiu_novo checkout'
+      });
+  };   
+</script>

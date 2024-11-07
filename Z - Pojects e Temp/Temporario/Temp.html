@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <li id='txt-telefone-migracao'      value=1>    Div 1</li>
+    <li id='txt-telefone-portabilidade' value=2>    Div 2</li>
+    <li id='txt-telefone-aquisicao'     value=3>    Div 3</li>
+    
+    <button id="button" onclick="console.log(a())">Click</button>
+</body>
+
+<footer>
+    <script>
+    function a(){
+    if(document.querySelector('#txt-telefone-migracao').value != ''){return document.querySelector('#txt-telefone-migracao').value};
+    if(document.querySelector('#txt-telefone-portabilidade').value != ''){return document.querySelector('#txt-telefone-portabilidade').value};
+    if(document.querySelector('#txt-telefone-aquisicao').value != ''){return document.querySelector('#txt-telefone-aquisicao').value};
+    }
+    </script>
+</footer>
+
+</html>
+

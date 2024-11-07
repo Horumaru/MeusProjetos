@@ -1,0 +1,251 @@
+/*
+<!--
+
+<img
+src="//secure.lomadee.com/v2.png?lmdaId={advertiserId}&currency={curre
+ncy}&paymentType={paymentType}&orderId={orderId}&prod={sku};{category}
+;{price};{quantity};{name}&discount={discountValue}&lmdsid={lomadeeParam}&
+type=cpa&origin=lmd&lmdorig=lomadee&origin=lmd">
+
+</img>
+
+O advertiserId é um dado estático para cada uma das marcas 
+
+Ponto Frio o advertiserId é  5754
+Extra o advertiserId é 5755
+Casas Bahia o advertiserId é 5756
+
+
+Já o LomadeeParam é o nosso clickID, nós mandamos o dado no parâmetro lmdsid da URL de redirecionamento. 
+Quando o usuário clica na URL trackeada que é compre.vc/v2/{HASH} ele é redirecionado para o site de alguma das marcas (Ponto Frio, Extra ou Casas Bahia), durante esse redirecionamento nós adicionamos uma parametrização à URL em formato de querystring, 
+hoje o que temos configurado é utm_source=lomadee&utm_medium=afiliados&utm_campaign={ID_DO_AFILIADO}&lmdsid={CLICKID}. 
+
+Vocês vão pegar o valor que a gente enviar na URL no parâmetro lmdsid, gravar ele de alguma forma e enviar de volta na chamada da API no lugar do LomadeeParam. 
+
+>
+
+
+<img id=lmdImgPxl src="">
+
+<script>
+  var lmdaId = "123654"         //{advertiserId}       PF= 5754; Ex= 5755; CB= 5756"
+  var currency = "BRL"         //{currency}        //BRL
+  var paymentType = "formaPagamento {paymentType}  // tipo pagamento
+  var orderId = dataLayer[0].ecommerce.compra.id //{orderId}          // id compra
+
+  var prod = ""
+  for (var i = 0; i < dataLayer[0].ecommerce.compra.produtos.length; i++) {
+    var produto = dataLayer[0].ecommerce.compra.produtos[i]
+    prod = prod.concat("prod=" + produto.sku + ";" + produto.categotia + ";" + produto.preco + ";" + produto.quantidade + ";" + produto.nome + "&")
+  }
+
+  var discount = "discountValue" //{discountValue}   // disconto
+  var lmdsid = "lomadeeParam"  // {lomadeeParam}      // pegar o lmdsid={CLICKID} na URL
+
+  var texto = "//secure.lomadee.com/v2.png?lmdaId=" + lmdaId + "&currency=" + currency + "&paymentType=" + paymentType + "&orderId=" + orderId + "&" + prod + "discount=" + discount + "&lmdsid=" + lmdsid + "&type=cpa&origin=lmd&lmdorig=lomadee&origin=lmd"
+  document.getElementById('lmdImgPxl').src = texto
+</script>
+
+-->
+<script>
+  var dataLayer = dataLayer || []
+  dataLayer.push({
+    event: "compra_efetuada",
+    ecommerce: {
+      compra: {
+        id: 369527836,
+        receita: 0,
+        taxas: 0,
+        valorFreteTotal: 52.97,
+        tipoFrete: "normal",
+        valorDesconto: 0,
+        tipoVendedor: "misto",
+        quantidadeTotal: 6,
+        prazoEntrega: 4,
+        produtos: [
+          {
+            sku: "55052133",
+            idProduto: "54125654",
+            nome: "smartphone samsung galaxy a03 core preto 32gb 2gb ram camera traseira de 8mp sel" +
+              "fie de 5mp tela infinita de 65 e processador octa core",
+            idLojista: "10037",
+            preco: 699,
+            idDepartamento: "38",
+            nomeDepartamento: "telefones e celulares",
+            quantidade: 1
+          },
+          {
+            sku: "14951669",
+            idProduto: "11358495",
+            nome: "faqueiro brinox em polipropileno e aco inox itaparica preto 16 pecas",
+            idLojista: "10037",
+            preco: 105.8,
+            idDepartamento: "371",
+            nomeDepartamento: "utilidades domesticas",
+            quantidade: 2
+          },
+          {
+            sku: "12731690",
+            idProduto: "9159964",
+            nome: "geladeira brastemp brm44hk frost free duplex com compartimento extrafrio e fresh" +
+              " zone inox 375l 110v",
+            idLojista: "10037",
+            preco: 3229.05,
+            idDepartamento: "13",
+            nomeDepartamento: "eletrodomesticos",
+            quantidade: 1
+          },
+          {
+            sku: "1548181094",
+            idProduto: "59611577",
+            nome: "smartphone samsung galaxy a03 core 32gb 2gb ram tela infinita de 65quot cobre",
+            idLojista: "209633",
+            preco: 791.12,
+            idDepartamento: "38",
+            nomeDepartamento: "telefones e celulares",
+            quantidade: 1
+          },
+          {
+            sku: "1548181085",
+            idProduto: "59611568",
+            nome: "smartphone samsung galaxy a03 core 32gb 2gb ram tela infinita de 65 preto",
+            idLojista: "209633",
+            preco: 791.12,
+            idDepartamento: "38",
+            nomeDepartamento: "telefones e celulares",
+            quantidade: 1
+          }
+        ]
+      }
+    }
+  })
+</script>
+<img id=lmdImgPxl src="">
+<script>
+    var lmdaId = 5756 //PF= 5754; Ex= 5755; CB= 5756"
+    var currency = "BRL" //{currency}
+    var paymentType = {{DT - ecommerce.compra.formasPagamento}}// tipo pagamento
+    var orderId = {{DT - ecommerce.compra.id}}// id compra
+
+    var prod = "";
+    for (var i = 0; i < {{DT - ecommerce.compra.produtos}}.length; i++) {
+      var produto = {{DT - ecommerce.compra.produtos}}[i]
+      var prod = prod.concat("prod=" + produto[i].sku + ";" + produto[i].nomeDepartamento + ";" + produto[i].preco + ";" + produto[i].quantidade + ";" + produto[i].nome + "&")
+    }
+
+    var discount = {{DT - ecommerce.compra.valorDesconto}} //{discountValue}   // disconto
+    var lmdsid = "lomadeeParam" // {lomadeeParam}      // pegar o lmdsid={CLICKID} na URL
+
+    var texto = "//secure.lomadee.com/v2.png?lmdaId=" + lmdaId + "&currency=" + currency + "&paymentType=" + paymentType + "&orderId=" + orderId + "&" + prod + "discount=" + discount + "&lmdsid=" + lmdsid + "&type=cpa&origin=lmd&lmdorig=lomadee&origin=lmd"
+    
+document.getElementById('lmdImgPxl').src = texto
+dataLayer.push({"event": "POCRPH", "user_event": texto})
+</script>
+-->
+*/
+/*
+boleto bancario | 1
+boleto | 1
+boleto bradesco | 1
+cartao de credito | undefined
+pix | 1
+valecompra | 1
+
+cartao de credito visa | 8, boleto bradesco | 1
+
+{paymentType} Tipo de pagamento utilizado na venda. Valores:
+cc (cartão de crédito)
+cd (débito)
+bl (boleto)
+fp (outros)
+
+
+var fp = "cartao de credito visa | 8, cartao de credito visa | 8"
+i = fp.split("|")
+
+console.log(i.length)
+
+ */
+/*
+function converteFormaPagamento(formaPagamento) {
+  if (formaPagamento.toLowerCase().includes("credito")) {
+    return "cc";
+  } else if (formaPagamento.toLowerCase().includes("debito")) {
+    return "cd";
+  } else if (formaPagamento.toLowerCase().includes("boleto")) {
+    return "bl";
+  } else {
+    return "fp";
+  }
+}
+
+const formasPagamento = "cartao de credito visa | 8, boleto bradesco | 1, cartao de credito visa | 8, boleto bradesco | 1"
+const formasPagamentoArray = formasPagamento.split(",");
+
+for (let formaPagamento of formasPagamentoArray) {
+  formaPagamento = formaPagamento.trim();
+  const [forma] = formaPagamento.split("|");
+  const formaAbreviada = converteFormaPagamento(forma);
+  console.log(formasPagamentoArray.length >= 1 ? "fp" : formaAbreviada);
+}
+*/
+/*
+function converteFormaPagamento(formaPagamento) {
+  
+  if (formaPagamento.toLowerCase().includes("credito")) {
+    return "cc";
+  } else if (formaPagamento.toLowerCase().includes("debito")) {
+    return "cd";
+  } else if (formaPagamento.toLowerCase().includes("boleto")) {
+    return "bl";
+  } else {
+    return "fp";
+  }
+}
+
+const formasPagamento = "pix | 1";
+const formasPagamentoArray = formasPagamento.split(",");
+let formaAbreviada;
+
+if (formasPagamentoArray.length > 1) {
+  formaAbreviada = "fp";
+} else {
+  const [forma] = formasPagamentoArray[0].split("|");
+  formaAbreviada = converteFormaPagamento(forma.trim());
+}
+console.log(formaAbreviada);
+
+const formaPagamento = "cartao de credito visa | 8";
+
+function converteFormaPagamento(cartao de credito visa | 8) {
+  var formasPagamentoArray = formaPagamento.split(",");
+  if (formasPagamentoArray.length > 1) {
+    return "fp";
+  } else if (formaPagamento.toLowerCase().includes("credito")) {
+    return "cc";
+  } else if (formaPagamento.toLowerCase().includes("debito")) {
+    return "cd";
+  } else if (formaPagamento.toLowerCase().includes("boleto")) {
+    return "bl";
+  } else {
+    return "fp";
+  }
+}
+console.log(converteFormaPagamento(formaPagamento))
+*/
+function a() {
+  var formaPagamento = "pix | 1"
+  var formasPagamentoArray = formaPagamento.split(",");
+  if (formasPagamentoArray.length > 1) {
+    return "fp";
+  } else if (formaPagamento.toLowerCase().includes("credito")) {
+    return "cc";
+  } else if (formaPagamento.toLowerCase().includes("debito")) {
+    return "cd";
+  } else if (formaPagamento.toLowerCase().includes("boleto")) {
+    return "bl";
+  } else {
+    return "fp";
+  }
+}
+console.log(a())

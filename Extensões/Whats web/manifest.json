@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Timer para WhatsApp",
+  "version": "1.0",
+  "description": "Timer com envio automático de mensagens para WhatsApp Web",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+} 

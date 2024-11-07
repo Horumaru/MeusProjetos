@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Minha Extensão",
+    "version": "1.0",
+    "description": "Exemplo de extensão que exibe o título da página",
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "permissions": [
+      "tabs"
+    ],
+    "host_permissions": [
+      "<all_urls>"
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": [
+          "popup.html",
+          "popup.css",
+          "popup.js"
+        ],
+        "matches": [
+          "<all_urls>"
+        ]
+      }
+    ]
+  }
+  
