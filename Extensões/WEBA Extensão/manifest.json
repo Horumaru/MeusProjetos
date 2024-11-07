@@ -1,0 +1,12 @@
+{
+    "manifest_version":3,
+
+    "name": "Weba Extension",
+    "version": "0.1",
+    "description": "tentará ajudar nos paranauê do trampo",
+    "action":{
+        "default_title": "Weba!!",
+        "default_popup": "index.html"
+    }
+
+}

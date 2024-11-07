@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: normal 15pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = 'Renan' //window.prompt('Digite seu nome')
+        document.write(`Olá, <strong>${nome}</strong>! Seu nome tem ${nome.length} letras<br>`)
+        document.write(`Seu nome em maiusculo é <strong>${nome.toUpperCase()}</strong><br>`)
+        document.write(`Seu nome em minusculo é <strong>${nome.toLocaleLowerCase()}</strong><br><br><br>`)
+        
+        //salario
+        var n1 = 1545.50
+        document.write(`n1.toFixed(2) = ${n1.toFixed(2)}<br>`)  
+        document.write(`n1.toFixed(2).replace =  ${n1.toFixed(2).replace(',','.')}<br><br><br>`)
+        
+        document.write(`n1.toLocaleString =  ${ n1.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}) }<br>`)
+        document.write(`n1.toLocaleString =  ${ n1.toLocaleString('pt-br',{style: 'currency', currency: 'USD'}) }<br>`)
+        document.write(`n1.toLocaleString =  ${ n1.toLocaleString('pt-br',{style: 'currency', currency: 'EUR'}) }<br>`)
+    </script>
+</body>
+</html>

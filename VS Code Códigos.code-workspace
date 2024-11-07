@@ -1,0 +1,47 @@
+{
+    "folders": [
+		{
+			"name": "Anotações",
+			"path": "Anotações"
+		},
+		{
+			"name": "Curso em Video",
+			"path": "Curso em Video"
+		},
+		{
+			"name": "Extensões",
+			"path": "Extensões"
+		},
+		{
+			"name": "Python",
+			"path": "Python"
+		},
+		{
+			"name": "Python Anaconda",
+			"path": "Python Anaconda"
+		},
+		{
+			"name": "Testes",
+			"path": "Testes"
+		},
+		{
+			"name": "Trabalhos",
+			"path": "Trabalhos"
+		},
+		{
+			"name": "Z - Pojects e Temp",
+			"path": "Z - Pojects e Temp"
+		},
+		{
+			"name": "Code Wars",
+			"path": "Code Wars"
+		},
+		{
+			"name": "Udemy",
+			"path": "Udemy"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Z - Pojects e Temp"
+	}
+}

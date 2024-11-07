@@ -1,0 +1,21 @@
+
+
+Proximos Passos
+curso de HTML5 e CSS (UH)
+android studio
+
+
+Estudar mais sobre
+function
+    arrow function
+    call back
+    IIFE
+Javascript Funcional
+Objetos - Dicionaro do JS
+Modularização
+RegEX
+JSON
+AJAX
+NodeJS
+
+Jquery, Angular etc.

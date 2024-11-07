@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background: rgb(176, 176, 233);
+            color: rgb(46, 15, 33);
+            font: normal 13pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando os estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    <!--<div class="msg">Outro trem a ser clicado</div>-->
+
+    <script>
+        // window.document.write(window.navigator.appName, '<br>')
+        // window.document.write(window.document.URL, '<br>')
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        /*
+        var trem1 = document.querySelector('div#msg')
+        var trem2 = document.querySelector('div.msg')
+        document.write('Div com id=msg pegamos com # ->',trem1.innerHTML,'<br>') 
+        document.write('Div com class=msg pegamos com . ->',trem2.innerHTML,'<br>') 
+        
+        window.document.write('Esta escrito -> ', p1.innerText)
+        p1.style.color = 'blue'
+        
+
+        document.write(p1.innerText,'<br>') //Vem somente o texto
+        document.write(p1.innerHTML,'<br>') // vem o texto formatado com HTML
+        var d = window.document.getElementById('msg')
+        d.style.background = 'blue'
+        d.style.color = 'red'
+        d.innerText = 'Olá'
+        */
+
+
+    </script>
+</body>
+</html>
