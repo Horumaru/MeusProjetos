@@ -1,0 +1,29 @@
+body {
+    background: rgb(190, 155, 245);
+    font: normal 15pt;
+}
+
+header {
+    color: rgb(241, 19, 19);
+    text-align: center;
+}
+
+header, div, button {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.705);
+    text-align: center;
+    align-self: center;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+button {
+    width: 150px;
+}
