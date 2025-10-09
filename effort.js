@@ -1,4 +1,4 @@
-As tags abaixo foram feitas com a vista direta do SF 'sf/my.sf.com/Ndocaso'
+// As tags abaixo foram feitas com a vista direta do SF 'sf/my.sf.com/Ndocaso'
 
 // Effort Hours para casos tag
 //doubleclick
